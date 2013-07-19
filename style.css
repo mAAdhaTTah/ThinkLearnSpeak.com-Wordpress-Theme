@@ -2316,11 +2316,12 @@ footer.entry-meta {
 	content: ".";
 }
 
-#featured-area .metaslider {
+#featured-area .metaslider-wrap {
 	max-width: 600px;
 	float: left;
 	white-space: normal;
 	position: relative;
+	width: 100%;
 }
 
 #featured-area .welcome {

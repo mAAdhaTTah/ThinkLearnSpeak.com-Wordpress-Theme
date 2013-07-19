@@ -5,7 +5,7 @@
 
 <div id="main-wrapper">
 	<div id="featured-area">
-		<div class="metaslider">
+		<div class="metaslider-wrap">
 			<?php echo do_shortcode("[metaslider id=778]"); ?>
 		</div>
 		<div class="welcome">
