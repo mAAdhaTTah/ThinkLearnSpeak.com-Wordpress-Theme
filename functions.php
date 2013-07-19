@@ -54,7 +54,15 @@ function thinklearnspeak_widgets_init() {
 }
 add_action( 'widgets_init', 'thinklearnspeak_widgets_init' );
 
-
+function thinklearnspeak_setup() {
+	/*
+	 * This theme uses a custom image size for featured images, displayed on
+	 * "standard" posts and pages.
+	 */
+	add_theme_support( 'post-headers' );
+	set_post_thumbnail_size( 600, 250, true );
+}
+add_action( 'after_setup_theme', 'thinklearnspeak_setup' );
 
 function exclude_widget_categories($args) {
 	$exclude = "201,175,68"; // The IDs of the excluding categories
