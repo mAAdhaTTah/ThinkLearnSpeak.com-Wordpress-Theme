@@ -14,7 +14,7 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 				<div class="entry-thumbnail">
-					<?php the_post_thumbnail('post-headers'); ?>
+					<?php the_post_thumbnail('post-thumbnail'); ?>
 				</div>
 			<?php endif; ?>
 				<div class="entry-meta">
