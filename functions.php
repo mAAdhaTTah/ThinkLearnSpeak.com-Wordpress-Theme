@@ -55,14 +55,33 @@ function thinklearnspeak_widgets_init() {
 add_action( 'widgets_init', 'thinklearnspeak_widgets_init' );
 
 function thinklearnspeak_setup() {
-	/*
-	 * This theme uses a custom image size for featured images, displayed on
-	 * "standard" posts and pages.
-	 */
-	add_theme_support( 'post-thumbnail' );
-	set_post_thumbnail_size( 600, 250, true );
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 600, 250, true ); // Normal post thumbnails
 }
-add_action( 'after_setup_theme', 'thinklearnspeak_setup' );
+add_action( 'after_setup_theme', 'thinklearnspeak_setup', 11 );
+
+/**
+ * Remove standard image sizes so that these sizes are not
+ * created during the Media Upload process
+ *
+ * Tested with WP 3.2.1
+ *
+ * Hooked to intermediate_image_sizes_advanced filter
+ * See wp_generate_attachment_metadata( $attachment_id, $file ) in wp-admin/includes/image.php
+ *
+ * @param $sizes, array of default and added image sizes
+ * @return $sizes, modified array of image sizes
+ * @author Ade Walker http://www.studiograsshopper.ch
+ */
+
+function sgr_filter_image_sizes( $sizes) {
+
+	unset( $sizes['medium']);
+	unset( $sizes['large']);
+	
+	return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
 
 function exclude_widget_categories($args) {
 	$exclude = "201,175,68"; // The IDs of the excluding categories
@@ -70,7 +89,7 @@ function exclude_widget_categories($args) {
 	return $args;
 }
 
-add_filter("widget_categories_args","exclude_widget_categories");
+add_filter('widget_categories_args', 'exclude_widget_categories' );
 
 
 add_action( 'after_setup_theme', 'thinklearnspeak_formats', 11 );
