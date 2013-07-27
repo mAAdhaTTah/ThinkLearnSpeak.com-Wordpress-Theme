@@ -2796,7 +2796,7 @@ hr {
 		white-space: normal;
 		position: relative;
 	}
-	#featured-area .metaslider {
+	#featured-area .metaslider-wrap {
 		max-width: 900px;
 		display: inline-block;
 		white-space: normal;
