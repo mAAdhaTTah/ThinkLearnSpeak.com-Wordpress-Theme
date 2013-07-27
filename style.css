@@ -1159,9 +1159,11 @@ ul.nav-menu li:hover > ul,
 	margin-right: -60px;
 }
 
+/*
 footer.entry-meta {
 	margin-top: 12px;
 }
+*/
 
 .format-standard footer.entry-meta {
 	margin-top: 0;
