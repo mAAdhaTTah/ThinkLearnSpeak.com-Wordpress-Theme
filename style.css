@@ -1410,6 +1410,7 @@ footer.entry-meta {
 /* Aside */
 .format-aside {
 	background-color: #f7f5e7;
+	padding-top: 20px;
 }
 
 .blog .format-aside:first-of-type,
