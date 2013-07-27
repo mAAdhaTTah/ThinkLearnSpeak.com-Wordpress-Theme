@@ -2,7 +2,7 @@
 /**
  * The default template for displaying content. Used for both single and index/archive/search.
  *
- * @package WordPress
+ * @package WordPress   class="attachment-post-thumbnail wp-post-image"
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  */
@@ -14,7 +14,7 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 				<div class="entry-thumbnail">
-					<?php the_post_thumbnail('post-thumbnail'); ?>
+					<?php the_post_thumbnail('post-thumbnail', array('class' => 'attachment-$size aligncenter')) ?>
 				</div>
 			<?php endif; ?>
 				<div class="entry-meta">
