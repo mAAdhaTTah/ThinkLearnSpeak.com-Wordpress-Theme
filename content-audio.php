@@ -12,7 +12,7 @@
 	<header class="entry-header">
 		<?php if ( is_single() ) : ?><!-- single page -->
 			<div class="entry-meta">
-				<?php twentythirteen_entry_meta(); ?>
+				<?php thinklearnspeak_entry_meta(); ?>
 				<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
 			</div><!-- .entry-meta -->
 		<?php else : ?><!-- not single page -->

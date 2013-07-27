@@ -60,6 +60,31 @@ function thinklearnspeak_setup() {
 }
 add_action( 'after_setup_theme', 'thinklearnspeak_setup', 11 );
 
+if ( ! function_exists( 'twentythirteen_entry_meta' ) ) :
+/**
+ * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
+ *
+ * Create your own twentythirteen_entry_meta() to override in a child theme.
+ *
+ * @since Twenty Thirteen 1.0
+ *
+ * @return void
+ */
+function thinklearnspeak_entry_meta() {
+	if ( is_sticky() && is_home() && ! is_paged() )
+		echo '<p class="featured-post">' . __( 'Sticky', 'thinklearnspeak' ) . '</p>';
+
+	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
+		twentythirteen_entry_date();
+
+	// Translators: used between list items, there is a space after the comma.
+	$categories_list = get_the_category_list( __( ', ', 'thinklearnspeak' ) );
+	if ( $categories_list ) {
+		echo '<p class="categories-links">' . $categories_list . '</p>';
+	}
+}
+endif;
+
 /**
  * Remove standard image sizes so that these sizes are not
  * created during the Media Upload process
