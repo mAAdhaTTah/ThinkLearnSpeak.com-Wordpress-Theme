@@ -80,6 +80,13 @@
   vertical-align: top;
   content: ".";
 }
+.site-footer {
+  background-color: #FCF5E3;
+  color: #686758;
+  font-size: 14px;
+  text-align: center;
+  clear: both;
+}
 .site-header .home-link {
   color: #CCCCCC;
   display: block;
@@ -157,10 +164,6 @@
   /* padding: 0 376px 0 60px; */
 
 }
-/**
- * 5.0 Content
- * ----------------------------------------------------------------------------
- */
 .hentry {
   padding: 0 30px;
 }
@@ -198,8 +201,7 @@ footer.entry-meta {
 	margin-top: 12px;
 }
 Fix this
-*/
-/* Standard */
+*//* Standard */
 .format-standard {
   padding-top: 10px;
 }
@@ -318,14 +320,6 @@ Fix this
   /* Avoid player width overflow. */
 
 }
-/**
- * 5.7 Post/Paging Navigation
- * ----------------------------------------------------------------------------
- */
-/**
- * 5.9 Archives
- * ----------------------------------------------------------------------------
- */
 .archive-header {
   background-color: #A0A597;
 }
@@ -349,10 +343,6 @@ Fix this
   /* padding-right: 316px; Reset this*/
 
 }
-/**
- * 5.14 Sharing Jetpack CSS Edits
- * ----------------------------------------------------------------------------
- */
 .share-end {
   display: none !important;
 }
@@ -362,25 +352,6 @@ Fix this
 .widget.horizontal {
   width: 90px !important;
 }
-/**
- * 5.15 Custom Homepage CSS
- * ----------------------------------------------------------------------------
- */
-/**
- * 6.0 Sidebar
- * ----------------------------------------------------------------------------
- */
-/*
-.site-main .widget-area {
-	float: right;
-	width: 300px;
-	vertical-align: top;
-}
-Reset this*/
-/**
- * 6.1 Widgets
- * ----------------------------------------------------------------------------
- */
 .widget {
   background-color: #DEE5D1;
   -webkit-hyphens: auto;
@@ -421,21 +392,6 @@ Reset this*/
   width: 100%;
   height: auto;
 }
-/**
- * 7.0 Footer
- * ----------------------------------------------------------------------------
- */
-.site-footer {
-  background-color: #FCF5E3;
-  color: #686758;
-  font-size: 14px;
-  text-align: center;
-  clear: both;
-}
-/**
- * 8.0 Media Queries
- * ----------------------------------------------------------------------------
- */
 @media (max-width: 999px) {
   .site-main .sidebar-container {
     height: auto;
