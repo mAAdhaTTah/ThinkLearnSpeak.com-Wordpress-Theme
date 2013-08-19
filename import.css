@@ -196,12 +196,10 @@ hr {
 .entry-content blockquote {
   font-size: 16px;
 }
-/*
 footer.entry-meta {
-	margin-top: 12px;
+  margin-top: 0;
 }
-Fix this
-*//* Standard */
+/* Standard */
 .format-standard {
   padding-top: 10px;
 }
@@ -343,8 +341,7 @@ Fix this
   padding: 0 0 5px;
 }
 .sidebar .archive-meta {
-  /* padding-right: 316px; Reset this*/
-
+  padding-right: 0;
 }
 .share-end {
   display: none !important;
